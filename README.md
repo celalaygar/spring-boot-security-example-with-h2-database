@@ -1,10 +1,9 @@
 # springboot-security-with-h2-example
 
 How to use login process<br/>
-Anybody has ROLE_EDITOR and ROLE_ADMIN can only enter links called /rest/** and /actuator/** for `AUTHORIZATION`
+Anybody has ROLE_EDITOR or ROLE_ADMIN can enter links called /rest/** and /actuator/** for `AUTHORIZATION`. Anybody only has ROL_USER can't enter links called /rest/** and /actuator/**
 - `links` -> `localhost:8182/rest/personels`, `localhost:8182/rest/personel/3`, `localhost:8182/rest/personel?fn=Celal`
 - `links` -> `localhost:8182/actuator/health`
-in src/main/resources/data.sql
 ``` 
 INSERT INTO USERS VALUES('user1','{noop}12345',TRUE);
 INSERT INTO USERS VALUES('user2','{noop}secrett',TRUE);
