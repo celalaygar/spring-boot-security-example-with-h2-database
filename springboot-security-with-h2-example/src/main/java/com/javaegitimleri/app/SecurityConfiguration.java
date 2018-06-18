@@ -26,6 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests().antMatchers("/**/favicon.ico","/css/**","/js/**","/images/**","/webjars/**","/login.html").permitAll();
 		
 		//user yetkilendirme bölümü
+		//only entry links called /rest/** anybody has ROLE_EDITOR and ROLE_ADMIN
 		http.authorizeRequests().antMatchers("/rest/**").access("hasRole('EDITOR')");
 		http.authorizeRequests().antMatchers("/actuator/**").access("hasRole('ADMIN')");
 		
