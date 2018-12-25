@@ -1,7 +1,14 @@
 # springboot-security-with-h2-example
 
 How to use login process<br/>
-Anybody has ROLE_EDITOR or ROLE_ADMIN can enter links called /rest/** and /actuator/** for `AUTHORIZATION`. Anybody only has ROL_USER can't enter links called /rest/** and /actuator/**
+
+The application showing how to use Spring Boot with Spring Security for common needs, such as:
+
+* Customized login form
+* DAO-based authentication
+* Basic "remember me" authentication
+
+Anybody having ROLE_EDITOR or ROLE_ADMIN can enter links called /rest/** and /actuator/** for `AUTHORIZATION`. Anybody only has ROL_USER can't enter links called /rest/** and /actuator/**
 - `links` -> `localhost:8182/rest/personels`, `localhost:8182/rest/personel/3`, `localhost:8182/rest/personel?fn=Celal`
 - `links` -> `localhost:8182/actuator/health`
 ``` 
